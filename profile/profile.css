@@ -256,7 +256,7 @@ main {
     display: flex;
     flex-flow: column;
     width: var(--left-side-bar);
-    /* height: calc(100vh - calc(var(--small-margin) + var(--big-margin))); */
+    min-height: calc(100vh - calc(var(--small-margin) + var(--big-margin)));
     padding: var(--small-margin);
     background-color: var(--back-color-60);
     color: var(--dark-color);
