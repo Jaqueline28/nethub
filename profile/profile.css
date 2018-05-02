@@ -12,6 +12,7 @@
 :root {
     /* Box shadows */
     --box-shadow-medium: 0px 0px 6px dimgray;
+    --box-shadow-material: 1px 1px 6px dimgray;
     /* Margins */
     --tiny-least-margin: 1px;
     --tiny-tiny-margin: 2px;
@@ -48,7 +49,9 @@
     /* Borders */
     --white-fore-border: solid var(--fore-color) var(--tiny-tiny-margin);
     /* Sizes */
+    --material-round: 2px;
     --left-side-bar: 220px;
+    --trending-card: 180px;
 }
 
 a {
@@ -243,7 +246,7 @@ nav {
     border-width: 1px;
 }
 
-/* Main */
+/* Left Menu */
 
 main {
     display: flex;
@@ -371,4 +374,74 @@ main {
     color: var(--dark-medium-color);
 }
 
-/* Bottom */
+/* Main */
+
+.trending-requests-container {
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    padding: var(--small-margin);
+    color: var(--fore-dark-color);
+}
+
+.trending-requests-container > h1 {
+    text-align: center;
+    font-weight: 100;
+}
+
+.trending-requests-container > h1 > span {
+    font-weight: 600;
+}
+
+.trending-requests {
+    padding: var(--small-tiny-margin);
+    display: flex;
+    flex-flow: row;
+    overflow-x: scroll;
+    background: rgb(235, 235, 235);
+    border-radius: calc(2 * var(--material-round));
+}
+
+.trending-card {
+    background-color: white;
+    padding: var(--small-tiny-margin);
+    width: var(--trending-card);
+    box-shadow: var(--box-shadow-material);
+    border-radius: var(--material-round);
+    background-color: rgb(238, 238, 238);
+}
+
+.trending-card:not(:first-child) {
+    margin-left: var(--small-tiny-margin);
+}
+
+.trending-card * {
+    text-align: center;
+}
+
+.trending-card > h4 {
+    font-weight: 900;
+}
+
+.trending-card > p {
+    font-weight: 100;
+    font-size: var(--medium-margin);
+    margin: var(--medium-small-margin) 0px;
+}
+
+.trending-card > div {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.trending-card > div > p {
+    font-size: smaller;
+    background-color: gainsboro;
+    padding: var(--tiny-tiny-margin) var(--tiny-margin);
+    border-radius: calc(var(--material-round) * 2);
+}
+
+.trending-card > div > p:not(:first-child) {
+    margin-left: var(--tiny-large-margin);
+}
