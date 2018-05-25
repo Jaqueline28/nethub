@@ -276,13 +276,14 @@ main {
     width: 100%;
 }
 
-#profile-picture img {
+#profile-picture:not(.no-filter) img {
     width: 100%;
     border-radius: 100%;
     filter: saturate(0);
 }
+/* inserting the info page image (class no-filter) details*/
 
-#profile-picture::before {
+#profile-picture:not(.no-filter)::before {
     content: "";
     z-index: 1;
     position: absolute;
@@ -292,6 +293,8 @@ main {
     background-color: var(--light-color-30);
     filter: brightness(.8) saturate(2);
 }
+
+/* finishing details */
 
 #options ul {
     display: flex;

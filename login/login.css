@@ -173,7 +173,7 @@ section {
 
 #section-login > *:not(#heading){
     animation-name: openItems;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }
 
 #heading{
