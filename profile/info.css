@@ -3,6 +3,8 @@
     --small-margin: 12px;
     --big-margin: 54px;
     --great-margin: 250px;
+
+    font-family: 'Roboto';
 }
 
 /* removing the filters set int the profile.css file and altering the standard 100% width */
@@ -28,11 +30,14 @@ main > div{
 }
 
 
+/* setting each item (field) in the profile info area, that consist of a label with 
+another information/input    
+*/
 
 .item{
     width:100%;
     margin-top: var(--small-margin);
-
+    
     display:flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -43,25 +48,59 @@ main > div{
     min-width: 30%;
 }
 
-.item > input, .item > textarea{
-    width: 70%;
-    max-width: 70%;
-
+#profile-picture{
+    align-items: flex-end;
+    display: unset;
 }
 
-.item > textarea{
-    height: 90px;
-
-    resize:none;
-}
+/* setting the item img display */
 
 .item img{
     width: 40%;
     height: 40%;
 }
 
-#profile-picture{
-    align-items: flex-end;
-    display: unset;
+/* setting the inputs in each item */
+
+.item > input, .item > textarea{
+    width: 70%;
+    max-width: 70%;
+    
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightgrey;
+    
+    border-top-style: none;
+    /* border-left-style: none;
+    border-right-style: none; */
+
+    padding-left: 5px;
+    padding-top: 3px;
+
+    transition:border 0.2s, box-shadow 0.2s;
 }
+
+
+.item > input{
+    height: 30px;
+}
+
+.item > textarea{
+    height: 90px;
+    
+    resize:none;
+}
+
+/* setting the hover/focus effect */
+
+.item input:hover, .item textarea:hover, .item input:focus, .item textarea:focus{
+    /* border-color: rgb(80, 79, 79);
+
+    border-top-style: ridge;
+    border-top-width: 1px; */
+
+    box-shadow: 0 3px 6px 1px rgb(83, 82, 82);
+}
+
 
