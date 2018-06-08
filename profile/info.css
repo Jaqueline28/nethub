@@ -14,93 +14,88 @@
     border-radius: 100%;
 }
 
+/* setting the layout for the main section of the info page (3 sections) */
+
 main{
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-}
-
-main > div{
-    /* margin-left: var(--big-margin); */
-    margin-top: var(--big-margin);
-    display: flex;
-    flex-flow: column;
-    align-items: flex-start;
-    width: 30% !important;
-}
-
-
-/* setting each item (field) in the profile info area, that consist of a label with 
-another information/input    
-*/
-
-.item{
-    width:100%;
-    margin-top: var(--small-margin);
-    
     display:flex;
     justify-content: space-evenly;
+}
+
+/* setting the sections internal layout, meanwhile defining its width as a third part of the total screen width */
+
+main section{
+    width:30%;
+    margin-top: 15px;
+    display:flex;
+    flex-flow: column;
     align-items: flex-start;
 }
 
-.item > label{
-    width: 30%;
-    min-width: 30%;
+/* giving a little bit of margin to the section top */
+
+main section h2{
+    margin-top: 5px;
 }
 
-#profile-picture{
-    align-items: flex-end;
-    display: unset;
+/* giving identation to the items on the sections as well as setting the font size bigger*/
+
+.item{
+    margin-top:10px;
+    margin-left: 15px;
+
+    font-size: 24px;
 }
 
-/* setting the item img display */
+/* making them occupy all available space on their sections */
 
-.item img{
-    width: 40%;
-    height: 40%;
+.item, .item input, .item textarea{
+    width:100%;
+}
+/* making the labels "float" */
+
+.item label{
+    position: relative;
+    top:15px;
 }
 
-/* setting the inputs in each item */
+/* erasing the borders from the inputs, to look more material-like */
 
-.item > input, .item > textarea{
-    width: 70%;
-    max-width: 70%;
+.item input{
+    border-style:none;
+    border-bottom-style: solid;
+    margin-top:0px;
+}
+
+/* adjusting the settings of the textarea */
+
+.item textarea{
+    margin-top:20px;
+    min-height: 200px;
+    resize: vertical;
+}
+
+/* giving some identation to the text inside the inputs/textareas */
+
+textarea, input{
+    padding-left:5px;
+
+    font-size:32px;
     
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: lightgrey;
-    
-    border-top-style: none;
-    /* border-left-style: none;
-    border-right-style: none; */
-
-    padding-left: 5px;
-    padding-top: 3px;
-
-    transition:border 0.2s, box-shadow 0.2s;
 }
 
-
-.item > input{
-    height: 30px;
+textarea{
+    padding-top:5px;
+    position:relative;
+    top:20px;
 }
 
-.item > textarea{
-    height: 90px;
-    
-    resize:none;
+/* setting a size to the badge icons */
+
+#badges .item img{
+    width:40px;
 }
 
-/* setting the hover/focus effect */
-
-.item input:hover, .item textarea:hover, .item input:focus, .item textarea:focus{
-    /* border-color: rgb(80, 79, 79);
-
-    border-top-style: ridge;
-    border-top-width: 1px; */
-
-    box-shadow: 0 3px 6px 1px rgb(83, 82, 82);
+#info .item label{
+    top:35px;
 }
-
 
