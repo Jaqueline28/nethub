@@ -271,6 +271,7 @@ main {
     color: var(--dark-color);
     transform: translateX(calc(var(--left-side-bar) * -1));
     transition: transform var(--large-interval) ease-in-out;
+    z-index: 3;
 }
 
 .left-to-right {
