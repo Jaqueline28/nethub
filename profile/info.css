@@ -51,11 +51,13 @@ main section h2{
 .item, .item input, .item textarea{
     width:100%;
 }
-/* making the labels "float" */
+/* making the labels "float" and setting its style transition time*/
 
 .item label{
     position: relative;
     top:15px;
+
+    transition: all 0.1s;
 }
 
 /* erasing the borders from the inputs, to look more material-like */
@@ -146,19 +148,71 @@ textarea{
 }
 
 /* setting the badges section display */
-.container{
+#badges-container{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
 
 }
 
+/* setting the label class for when it's input is under focus */
 
+.focus-input{
+    top: 2px !important;
+    font-size:10px;
+}
+
+/* setting the stats items style */
+
+.label-item{
+    font-size: 32px;
+    display:flex;
+    flex-flow: column nowrap;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: #a9a9a9;
+
+    padding: 5px;
+
+    margin-bottom: 15px;
+
+}
+
+/* setting the labels bold where they are not data */
+
+.label-item label:not(.data){
+    font-weight: bold;
+}
+
+/* setting the user info textarea focus effects */
+
+#bioinfo{
+    transition: all 0.1s;
+}
+
+#bioinfo:focus{
+    border-width: 2px; 
+    border-color: black;
+    border-radius: 4px;
+}
+
+
+/* setting the first input to be invisible, just as so the username label can be tabbed at page load */
+
+#info h2+input{
+    position: absolute;
+    top:-10000000000px;
+}
+
+
+/* setting the responsivity for the page */
 
 /* lowering the font-size to adjust to smaller devices */
 @media screen and (max-width: 1400px){
     
-    textarea, input{
+    textarea, input, .label-item{
         
         font-size:24px;
         
@@ -176,15 +230,44 @@ textarea{
         flex-flow: column;
         align-items: center;
     }
-
+    
     main section{
         width:90%;
         margin-bottom: 35px;
-
+        
     }
     main + section{
         margin-top: 35px;
         margin-bottom: 35px;
+        
+    }
+    
+    #stats-container{
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    
+    
+    #stats-inner-container{
+        display:flex;
 
+        width: 50%;
+        
+        flex-flow: column wrap;
+    }
+}
+
+/* adjusting the stats section shape to fit extremely small screens */
+
+@media screen and (max-width: 450px){
+    #stats-container{
+        flex-flow: column nowrap;
+    }
+
+    #stats-inner-container{
+        width: 100%;
     }
 }

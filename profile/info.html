@@ -52,14 +52,6 @@
             </div>
         </nav>
         <div id="left-main">
-            <!-- <div id="profile">
-                <div id="profile-picture">
-                    <img src="https://lh3.googleusercontent.com/-3zsbqdjBFOg/V795vss-IFI/AAAAAAAAFeE/K33nDkDXKHcqhihplIQVpQ9RDjZMtVY8gCEwYBhgL/w300-h300-p/13902721_1057648150998892_499652310354045807_n.jpg"
-                        alt="Profile Picture">
-                </div>
-                <h3 id="user-name">Lucas Viana</h3>
-                <h4 id="user-email">lv201122@gmail.com</h4>
-            </div> -->
             <div id="options">
                 <ul>
                     <a href="">
@@ -112,27 +104,34 @@
                 STATS
             </h2>
 
-            <div id="profile-picture" class="no-filter">
-                <img src="https://plus.google.com/_/focus/photos/public/AIbEiAIAAABDCNyg8_6Yspi3DiILdmNhcmRfcGhvdG8qKDYxMDJmZGI3NDZiNTc1ODI0MWRhNDhkNzFjNjI2MDg0MmRkZTMyZjQwATTYq5yDLcwAkgyaOreHUFPzEDld?sz=128"
-                    alt="Profile Picture">
-            </div>
 
-            <div class="item">
-                <label id="register-date">Data de cadastro</label>
-                <label class="data" id="register-date-data">27/06/2018</label>
+            <div id="stats-container">
+
+                <div id="profile-picture" class="no-filter">
+                    <img src="https://plus.google.com/_/focus/photos/public/AIbEiAIAAABDCNyg8_6Yspi3DiILdmNhcmRfcGhvdG8qKDYxMDJmZGI3NDZiNTc1ODI0MWRhNDhkNzFjNjI2MDg0MmRkZTMyZjQwATTYq5yDLcwAkgyaOreHUFPzEDld?sz=128"
+                    alt="Profile Picture">
+                </div>
+                
+                <div id="stats-inner-container">
+
+                    <div class="label-item">
+                        <label id="register-date">Data de cadastro</label>
+                        <label class="data" id="register-date-data">27/06/2018</label>
+                        
+                    </div>
+                    
+                    <div class="label-item">
+                        <label for="posts-count-id"id="posts-count">Quantidade de posts</label>
+                        <label class="data"id="posts-count-data">138</label>
+                    </div>
+                    
+                    <div class="label-item">
+                        <label for="score-input-id"id="score">Pontuação</label>
+                        <label class="data"id="score-input-data">1338</label>
+                    </div>
+                </div>
                 
             </div>
-            
-            <div class="item">
-                <label for="posts-count-id"id="posts-count">Quantidade de posts</label>
-                <label class="data"id="posts-count-data">138</label>
-            </div>
-            
-            <div class="item">
-                <label for="score-input-id"id="score">Pontuação</label>
-                <label class="data"id="score-input-data">1338</label>
-            </div>
-
 
         </section>
 
@@ -141,6 +140,8 @@
             <h2>
                 PROFILE INFO
             </h2>
+
+            <input type="text" autofocus>
 
             <div class="item">
                 <label for="username">Username</label>
@@ -153,8 +154,8 @@
             </div>
 
             <div class="item">
-                <label for="info">Info</label>
-                <textarea id="info" name="info" placeholder="Insert information about you here!"></textarea>
+                <label for="bioinfo">Info</label>
+                <textarea id="bioinfo" name="info" placeholder="Insert information about you here!"></textarea>
             </div>
         </section>
 
@@ -168,7 +169,7 @@
                 BADGES
             </h2>
 
-            <div class="container">
+            <div id="badges-container">
 
 
                 <div class="badge">
@@ -209,6 +210,8 @@
             </div>
         </section>
     </main>
+
+    <script src="info.js"></script>
 </body>
 
 </html>
