@@ -260,6 +260,39 @@ textarea{
     }
 }
 
+/* Top Nav Bar */
+#top-nav {
+    transition: background-color var(--medium-interval);
+}
+
+#nethub-logo {
+    transition: opacity var(--medium-interval);
+}
+
+.search-active #nethub-logo {
+    opacity: 0;
+}
+
+.search-active #left-main-toggle div {
+    background-color: var(--base-color);
+}
+
+.search-active #left-main-toggle {
+    display: flex !important;
+}
+
+.search-active #left-nav > * {
+    display: none;
+}
+
+.search-active #left-nav>a:hover {
+    background-color: var(--back-color) !important;
+}
+
+.search-active {
+    background-color: var(--fore-color);
+}
+
 /* adjusting the stats section shape to fit extremely small screens */
 
 @media screen and (max-width: 450px){

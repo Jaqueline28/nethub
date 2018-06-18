@@ -124,7 +124,7 @@ nav {
     align-items: center;
     padding: 0px calc((var(--big-medium-margin) + 2 * var(--small-tiny-margin) - var(--small-margin)) / 2);
     height: 100%;
-    background: var(--medium-color);
+    /* background: var(--medium-color); */
     border-radius: 100%;
     transition: background-color var(--medium-interval) ease-in;
 }
@@ -141,7 +141,7 @@ nav {
     background-color: var(--fore-color);
     width: var(--small-margin);
     height: var(--tiny-tiny-margin);
-    transition: transform var(--medium-interval) ease-out, opacity var(--medium-interval) ease-out, margin var(--medium-interval) ease-out;
+    transition: transform var(--medium-interval) ease-out, opacity var(--medium-interval) ease-out, margin var(--medium-interval) ease-out, background-color var(--medium-interval);
 }
 
 #left-nav>a div:not(:first-child) {
@@ -186,9 +186,10 @@ nav {
     transition: padding-left var(--medium-interval) ease-out, background-color var(--medium-interval) ease-out;
 }
 
-.search-area {
+/* Search Input */
+/* .search-area {
     background-color: white !important;
-}
+} */
 
 .search-area > a > div {
     background-color: white !important;
@@ -203,7 +204,7 @@ nav {
 }
 
 .search-area input {
-    width: var(--left-side-bar) !important;
+    width: 100% !important;
 }
 
 #query {
@@ -215,6 +216,7 @@ nav {
     height: 80%;
     width: 0px;
     background-color: transparent;
+    border-bottom: var(--base-color) 2px solid;
     transition: width var(--medium-interval) ease-out;
 }
 
@@ -386,7 +388,7 @@ main {
 
 /* Main */
 
-.trending-requests-container {
+.trending-container {
     width: 100vw;
     display: flex;
     flex-flow: column;
@@ -394,12 +396,12 @@ main {
     color: var(--fore-dark-color);
 }
 
-.trending-requests-container > h1 {
+.trending-container > h1 {
     text-align: center;
     font-weight: 100;
 }
 
-.trending-requests-container > h1 > span {
+.trending-container > h1 > span {
     font-weight: 600;
 }
 
@@ -455,3 +457,4 @@ main {
 .trending-card > div > p:not(:first-child) {
     margin-left: var(--tiny-large-margin);
 }
+

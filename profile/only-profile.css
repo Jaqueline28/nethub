@@ -1,0 +1,45 @@
+main > section{
+    
+    margin: 0 auto;
+    
+    width: 90vw;
+
+    
+}
+.section-container{
+
+    display:flex;
+    
+    flex-flow: row nowrap;
+    
+    justify-content: space-between;
+}
+
+.trending-container{
+    width: 43vw;
+}
+
+.trending-container > h1{
+    margin-bottom: 10px;
+
+    font-size: var(--medium-margin);
+}
+
+main{
+    margin-top: var(--big-medium-margin);
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+
+main > section > h1{
+    text-align:center;
+    font-size: var(--big-medium-margin);
+}
+
+
+
+

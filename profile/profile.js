@@ -1,12 +1,17 @@
 var leftMain;
 var rightNav;
+var topNavHeight;
+/**
+ * @type {HTMLElement}
+ */
+var topNav;
 var queryInput;
 var leftMainOpen = false;
 var searchAreaOpen = false;
 var toggleLeftMainButton;
 var toggleSearchAreaButton;
 window.addEventListener("load", () => {
-    // Left main
+    // Left Main
     leftMain = document.querySelector("#left-main");
     toggleLeftMainButton = document.querySelector("#left-main-toggle");
     toggleLeftMainButton.addEventListener("click", toggleLeftMain);
@@ -19,6 +24,8 @@ window.addEventListener("load", () => {
     rightNav.insertBefore(queryInput, rightNav.firstChild);
     toggleSearchAreaButton = document.querySelector("#search-area-toggle");
     toggleSearchAreaButton.addEventListener("click", verifySearch);
+    // Top Nav
+    topNav = document.querySelector("#top-nav");
 });
 
 
@@ -41,6 +48,12 @@ function performSearch() {
 }
 
 function toggleSearchArea() {
+    if(!searchAreaOpen) {
+        let topNavBounds = topNav.getBoundingClientRect();
+        topNavHeight = topNavBounds.height;
+        topNav.style.height = topNavHeight + "px";
+    }
     searchAreaOpen ^= true;
     rightNav.classList.toggle("search-area");
+    topNav.classList.toggle("search-active");
 }
