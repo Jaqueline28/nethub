@@ -40,6 +40,16 @@ main > section > h1{
     font-size: var(--big-medium-margin);
 }
 
+@media screen and (max-width: 500px){
+    .section-container{
+        flex-flow: column nowrap;
+        align-content: center;
+    }
 
+    .trending-container{
+        margin: 0 auto;
+        width: 90%;
+    }
+}
 
 
