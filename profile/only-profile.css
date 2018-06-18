@@ -50,6 +50,10 @@ main > section > h1{
         margin: 0 auto;
         width: 90%;
     }
+
+    .trending-card{
+        width: 500px;
+    }
 }
 
 

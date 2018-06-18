@@ -206,6 +206,18 @@ textarea{
     top:-10000000000px;
 }
 
+.incorrect{
+    background-color: rgb(216, 135, 135);
+}
+
+
+input:disabled{
+    background-color: initial;
+}
+
+#main-link, #main-link:visited{
+    color: white;
+}
 
 /* setting the responsivity for the page */
 
@@ -215,6 +227,7 @@ textarea{
     textarea, input, .label-item{
         
         font-size:24px;
+        padding-bottom: 5px;
         
     }
     
