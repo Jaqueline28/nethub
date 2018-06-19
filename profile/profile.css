@@ -191,6 +191,43 @@ nav {
     background-color: white !important;
 } */
 
+/* Top Nav Bar */
+#top-nav {
+    transition: background-color var(--medium-interval);
+}
+
+#nethub-logo {
+    transition: opacity var(--medium-interval);
+}
+
+.search-area {
+    width: 100%;
+}
+
+.search-active #nethub-logo {
+    opacity: 0;
+}
+
+.search-active #left-main-toggle div {
+    background-color: var(--base-color);
+}
+
+.search-active #left-main-toggle {
+    display: flex !important;
+}
+
+.search-active #left-nav > * {
+    display: none;
+}
+
+.search-active #left-nav>a:hover {
+    background-color: var(--back-color) !important;
+}
+
+.search-active {
+    background-color: var(--fore-color);
+}
+
 .search-area > a > div {
     background-color: white !important;
 }
@@ -204,7 +241,7 @@ nav {
 }
 
 .search-area input {
-    width: 100% !important;
+    display: unset !important;
 }
 
 #query {
@@ -214,7 +251,8 @@ nav {
     font-family: Roboto;
     font-size: larger;
     height: 80%;
-    width: 0px;
+    display: none;
+    width: 100%;
     background-color: transparent;
     border-bottom: var(--base-color) 2px solid;
     transition: width var(--medium-interval) ease-out;

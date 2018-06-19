@@ -7,9 +7,13 @@ inputs.forEach((value, index) => {
 });
 
 
-var loginButton = document.querySelector('#send-button');
+var signUpButton = document.querySelector('#send-button');
 
-loginButton.onclick = () =>{
-    console.log("pesado");
+signUpButton.onclick = () =>{
     window.location.href = '../profile/profile.html';
 };
+
+var loginButton = document.querySelector("#login-button");
+loginButton.addEventListener("click", function() {
+    window.location.href = "../login/login.html";
+});

@@ -28,13 +28,20 @@ main section{
     margin-top: 15px;
     display:flex;
     flex-flow: column;
-    align-items: flex-start;
+    align-items: center;
+
+
 }
 
 /* giving a little bit of margin to the section top */
 
 main section h2{
     margin-top: 5px;
+
+
+    font-size: var(--big-medium-margin);
+    color:#ff9100;
+
 }
 
 /* giving identation to the items on the sections as well as setting the font size bigger*/
@@ -57,7 +64,7 @@ main section h2{
     position: relative;
     top:15px;
 
-    transition: all 0.1s;
+    transition: all 0.3s, color 0s;
 }
 
 /* erasing the borders from the inputs, to look more material-like */
@@ -162,6 +169,17 @@ textarea{
     font-size:10px;
 }
 
+.focus-input, .focus-input + input{
+    color: #ff9100;
+}
+
+.focus-text-area, .focus-text-area + textarea{
+    color: #ff9100;
+}
+
+.focus-text-area + textarea{
+    border-color: #ff9100 !important;
+}
 /* setting the stats items style */
 
 .label-item{
@@ -182,8 +200,12 @@ textarea{
 
 /* setting the labels bold where they are not data */
 
+.label-item label{
+    color: #ff9100;
+}
 .label-item label:not(.data){
     font-weight: bold;
+    color: dimgray;
 }
 
 /* setting the user info textarea focus effects */
@@ -271,39 +293,6 @@ input:disabled{
         
         flex-flow: column wrap;
     }
-}
-
-/* Top Nav Bar */
-#top-nav {
-    transition: background-color var(--medium-interval);
-}
-
-#nethub-logo {
-    transition: opacity var(--medium-interval);
-}
-
-.search-active #nethub-logo {
-    opacity: 0;
-}
-
-.search-active #left-main-toggle div {
-    background-color: var(--base-color);
-}
-
-.search-active #left-main-toggle {
-    display: flex !important;
-}
-
-.search-active #left-nav > * {
-    display: none;
-}
-
-.search-active #left-nav>a:hover {
-    background-color: var(--back-color) !important;
-}
-
-.search-active {
-    background-color: var(--fore-color);
 }
 
 /* adjusting the stats section shape to fit extremely small screens */
